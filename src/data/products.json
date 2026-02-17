@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Iphone 16 proMax 250gb",
+    "price": 999,
+    "stock": 1
+  },
+  {
+    "id": 2,
+    "title": "MacBook Pro M4 ",
+    "price": 1900,
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "title": "Apple watch serie SE",
+    "price": 850,
+    "stock": 2
+  }
+]
