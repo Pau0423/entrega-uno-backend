@@ -15,12 +15,8 @@ const io = new Server(server);
 
 const productManager = new ProductManager();
 
-/* MIDDLEWARES */
-
 app.use(express.json());
 app.use(express.static("./src/public"));
-
-/* HANDLEBARS */
 
 app.engine(
   "handlebars",
@@ -32,13 +28,9 @@ app.engine(
 app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
-/* ROUTES */
-
 app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
-
-/* SOCKET.IO */
 
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
@@ -62,8 +54,6 @@ io.on("connection", async (socket) => {
     io.emit("updateProducts", products);
   });
 });
-
-/* SERVER */
 
 server.listen(8080, () => {
   console.log("Servidor escuchando en puerto 8080");
