@@ -56,7 +56,9 @@ export default class ProductManager {
   async deleteProduct(id) {
     const products = await this.getProducts();
 
-    const filteredProducts = products.filter((product) => product.id !== id);
+    const filteredProducts = products.filter(
+      (product) => Number(product.id) !== Number(id)
+    );
 
     if (products.length === filteredProducts.length) {
       return null;

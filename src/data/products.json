@@ -16,5 +16,10 @@
     "title": "Apple watch serie SE",
     "price": 850,
     "stock": 2
+  },
+  {
+    "id": 4,
+    "title": "Playstation 5",
+    "price": 750
   }
 ]
