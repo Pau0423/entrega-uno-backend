@@ -21,5 +21,12 @@
     "id": 4,
     "title": "Playstation 5",
     "price": 750
+  },
+  {
+    "id": 5,
+    "title": "Playstation 5",
+    "price": 750,
+    "stock": 5,
+    "category": "tech"
   }
 ]

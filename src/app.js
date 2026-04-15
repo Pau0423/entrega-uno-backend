@@ -2,6 +2,7 @@ import express from "express";
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import http from "http";
+import mongoose from "mongoose";
 
 import ProductManager from "./managers/ProductManager.js";
 
@@ -54,6 +55,13 @@ io.on("connection", async (socket) => {
     io.emit("updateProducts", products);
   });
 });
+
+mongoose
+  .connect(
+    "mongodb+srv://coder:coder321@cluster0.msdag27.mongodb.net/ecommerce"
+  )
+  .then(() => console.log("Mongo conectado"))
+  .catch((err) => console.log(err));
 
 server.listen(8080, () => {
   console.log("Servidor escuchando en puerto 8080");
